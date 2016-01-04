@@ -15,4 +15,10 @@ describe('de-indent', function () {
     assert.equal(res, 'abc\n  bcd\ncde\n  efg')
   })
 
+  it('tabs', function () {
+    var str = '\tabc\n\t\tbcd\n\tcde\n\t\tefg'
+    var res = deindent(str)
+    assert.equal(res, 'abc\n\tbcd\ncde\n\tefg')
+  })
+
 })
