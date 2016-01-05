@@ -4,7 +4,7 @@ var deindent = require('./index')
 describe('de-indent', function () {
 
   it('0 indent', function () {
-    var str = 'abc\n  bcd\n  cde\nefg'
+    var str = '\nabc\n  bcd\n  cde\nefg'
     var res = deindent(str)
     assert.equal(str, res)
   })

@@ -1,7 +1,11 @@
 var splitRE = /\r?\n/g
 var emptyRE = /^\s*$/
+var needFixRE = /^(\r?\n)*[\t\s]/
 
 module.exports = function deindent (str) {
+  if (!needFixRE.test(str)) {
+    return str
+  }
   var lines = str.split(splitRE)
   var min = Infinity
   var type, cur, c
