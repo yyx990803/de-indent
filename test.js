@@ -21,4 +21,10 @@ describe('de-indent', function () {
     assert.equal(res, 'abc\n\tbcd\ncde\n\tefg')
   })
 
+  it('single line', function () {
+    var str = '\n  <h2 class="red">{{msg}}</h2>\n'
+    var res = deindent(str)
+    assert.equal(res, '\n<h2 class="red">{{msg}}</h2>\n')
+  })
+
 })

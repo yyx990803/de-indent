@@ -16,6 +16,10 @@ module.exports = function deindent (str) {
         c = line.charAt(0)
         if (c === ' ' || c === '\t') {
           type = c
+          cur = count(line, type)
+          if (cur < min) {
+            min = cur
+          }
         } else {
           return str
         }
