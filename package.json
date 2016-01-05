@@ -1,6 +1,6 @@
 {
   "name": "de-indent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "remove extra indent from a block of code",
   "main": "index.js",
   "scripts": {
